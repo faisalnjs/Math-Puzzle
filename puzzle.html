@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charSet="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>🧩 Puzzle - Math Puzzle | Faisal N</title>
+    <meta name="description" content="🧩 Puzzle" />
+    <meta name="robots" content="follow, index" />
+    <meta property="og:site_name" content="Math Puzzle" />
+    <meta property="og:title" content="🧩 Puzzle - Math Puzzle" />
+    <meta property="og:description" content="🧩 Puzzle" />
+    <meta property="og:image" content="https://og.faisaln.cf/banner.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Math Puzzle" />
+    <meta name="twitter:title" content="🧩 Puzzle - Math Puzzle" />
+    <meta name="twitter:description" content="🧩 Puzzle" />
+    <meta name="twitter:image" content="https://og.faisaln.cf/banner.png" />
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        data-id="faisaln" data-description="Buy me a Pizza!" data-message="" data-color="#FF5F5F" data-position="Right"
+        data-x_margin="18" data-y_margin="18"></script>
+    <script async="" src="https://faisaln.cf/ipblocker.js"></script>
+    <script src="script.js"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <a href="/">◀ Back</a>
+    <h2>🧩 Puzzle - Math Puzzle</h2>
+    <h4></h4>
+    <div class="inline">
+        <button class="btn" onclick="adp('gen'); return false;">New Problem</button> <button class="btn" onclick="adp('reset'); return false;">Reset</button><br /><br />
+    </div>
+    <form onsubmit="adp('check'); return false;">
+        <h3>&nbsp&nbsp&nbsp</h3>
+        <input type="text" value="">
+        <h3>&nbsp&nbsp&nbsp</h3>
+        <input type="text" value="">
+        <h3>&nbsp&nbsp&nbsp</h3>
+        &nbsp=&nbsp <h3>&nbsp&nbsp&nbsp</h3>
+        &nbsp&nbsp&nbsp<input class="btn" type="submit" value="Check">
+    </form>
+    <script>
+        var errorelem = document.querySelector("h4");
+        errorelem.innerHTML = "Welcome!";
+        var score = 0
+        adp('gen');
+    </script>
+</body>
+
+</html>

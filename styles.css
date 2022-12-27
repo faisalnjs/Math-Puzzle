@@ -1,0 +1,44 @@
+html {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: salmon;
+    color: white;
+    padding: 5vw;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    margin-left: -10px;
+    opacity: 0.75;
+    transition: 0.3s;
+}
+
+form *, .inline * {
+    display: inline;
+}
+
+input {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    width: 15px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    background-color: seagreen;
+    color: white;
+    padding: 5px 10px;
+    width: unset;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.75;
+    transition: 0.3s;
+}
