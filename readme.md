@@ -1,4 +1,4 @@
-# Math Puzzle
+# 🧩 Math Puzzle
 #### By [Faisal N](https://faisaln.cf/)
 #### Made from scratch, completed in 2 days
 ### Puzzle: [math-puzzle.faisal.cf/puzzle](https://math-puzzle.faisaln.cf/puzzle.html)
