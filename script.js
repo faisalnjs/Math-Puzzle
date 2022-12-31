@@ -138,7 +138,8 @@ function adp(type) {
             document.querySelectorAll("h3")[0].innerHTML = num1
             document.querySelectorAll("h3")[1].innerHTML = randomNumber3
             document.querySelectorAll("h3")[2].innerHTML = num3
-            document.querySelectorAll("h3")[3].innerHTML = eval(eval(document.querySelectorAll("h3")[0].innerHTML + sign1 + document.querySelectorAll("h3")[1].innerHTML) + sign2 + document.querySelectorAll("h3")[2].innerHTML)
+            num4 = eval(eval(document.querySelectorAll("h3")[0].innerHTML + sign1 + document.querySelectorAll("h3")[1].innerHTML) + sign2 + document.querySelectorAll("h3")[2].innerHTML)
+            document.querySelectorAll("h3")[3].innerHTML = num4
             console.log("Answers: " + sign1 + ", " + sign2)
             document.querySelectorAll("input")[0].focus()
             if (num1 == "Infinity" || num1 == "NaN" || num2 == "Infinity" || num2 == "NaN" || num3 == "Infinity" || num3 == "NaN" || num4 == "Infinity" || num4 == "NaN") {
