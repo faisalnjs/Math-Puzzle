@@ -140,13 +140,11 @@ function adp(type) {
             document.querySelectorAll("h3")[2].innerHTML = num3
             num4 = eval(eval(document.querySelectorAll("h3")[0].innerHTML + sign1 + document.querySelectorAll("h3")[1].innerHTML) + sign2 + document.querySelectorAll("h3")[2].innerHTML)
             document.querySelectorAll("h3")[3].innerHTML = num4
-            if (num1 == Infinity || num1 == NaN || num2 == Infinity || num2 == NaN || num3 == Infinity || num3 == NaN || num4 == Infinity || num4 == NaN) {
-                adp('gen');
-                break;
-            } else {
+            if (Number.isInteger(num1) && Number.isInteger(num2) && Number.isInteger(num3) && Number.isInteger(num4)) {
                 console.log("Answers: " + sign1 + ", " + sign2)
                 document.querySelectorAll("input")[0].focus()
-                break;
+            } else {
+                adp('gen');
             }
             break;
         case 'check':
