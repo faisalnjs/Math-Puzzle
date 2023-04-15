@@ -19,28 +19,23 @@
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
         data-id="faisaln" data-description="Buy me a Pizza!" data-message="" data-color="#FF5F5F" data-position="Right"
         data-x_margin="18" data-y_margin="18"></script>
-    <script async="" src="https://faisaln.cf/ipblocker.js"></script>
-    <script src="script.js"></script>
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
     <a href="/">◀ Back</a>
     <h2>🧩 Answers - Math Puzzle</h2>
-    <h4></h4>
-    <form onsubmit="adp('solve'); return false;">
-        <input type="text" value="">
-        <h3>&nbsp&nbsp&nbsp</h3>
-        <input type="text" value="">
-        <h3>&nbsp&nbsp&nbsp</h3>
-        <input type="text" value="">
-        &nbsp=&nbsp <input type="text" value="">
-        &nbsp&nbsp&nbsp<input class="btn" type="submit" value="Solve">
-    </form>
-    <script>
-        var errorelem = document.querySelector("h4");
-        errorelem.innerHTML = "Try 10, 4, 10, 25!";
-    </script>
+    <h4 id="status">Try 10, 4, 10, 25!</h4>
+    <div class="inline">
+        (&nbsp<input id="solveNum1" type="text" value="10">
+        <h3 id="solveOp1">?</h3>
+        <input id="solveNum2" type="text" value="4">&nbsp)
+        <h3 id="solveOp2">?</h3>
+        <input id="solveNum3" type="text" value="10">
+        &nbsp=&nbsp <input id="solveAnswer" type="text" value="25">
+        &nbsp&nbsp&nbsp<button onclick="solve();" class="btn">Solve</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -17,7 +17,7 @@ a:hover {
     transition: 0.3s;
 }
 
-form *, .inline * {
+.inline * {
     display: inline;
 }
 
