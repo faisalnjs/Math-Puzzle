@@ -1,168 +1,150 @@
-function adp(type) {
-    switch (type) {
-        case 'solve':
-            var input1 = document.querySelectorAll("input")[0].value;
-            var input2 = document.querySelectorAll("input")[1].value;
-            var input3 = document.querySelectorAll("input")[2].value;
-            var input4 = document.querySelectorAll("input")[3].value;
-            if (input1 && input2 && input3 && input4) {
-                input1 = Number(document.querySelectorAll("input")[0].value);
-                input2 = Number(document.querySelectorAll("input")[1].value);
-                input3 = Number(document.querySelectorAll("input")[2].value);
-                input4 = Number(document.querySelectorAll("input")[3].value);
-                try {
-                    if (isNaN(input1) && isNan(input2) && isNan(input3) && isNan(input4)) {
-                    } else {
-                        errorelem.innerHTML = "Done."
-                        switch (input4) {
-                            case (input1 + input2) + input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "+";
-                                document.querySelectorAll("h3")[1].innerHTML = "+";
-                                break;
-                            case (input1 + input2) - input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "+";
-                                document.querySelectorAll("h3")[1].innerHTML = "-";
-                                break;
-                            case (input1 + input2) * input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "+";
-                                document.querySelectorAll("h3")[1].innerHTML = "*";
-                                break;
-                            case (input1 + input2) / input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "+";
-                                document.querySelectorAll("h3")[1].innerHTML = "/";
-                                break;
-                            case (input1 - input2) + input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "-";
-                                document.querySelectorAll("h3")[1].innerHTML = "+";
-                                break;
-                            case (input1 - input2) - input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "-";
-                                document.querySelectorAll("h3")[1].innerHTML = "-";
-                                break;
-                            case (input1 - input2) * input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "-";
-                                document.querySelectorAll("h3")[1].innerHTML = "*";
-                                break;
-                            case (input1 - input2) / input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "-";
-                                document.querySelectorAll("h3")[1].innerHTML = "/";
-                                break;
-                            case (input1 * input2) + input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "*";
-                                document.querySelectorAll("h3")[1].innerHTML = "+";
-                                break;
-                            case (input1 * input2) - input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "*";
-                                document.querySelectorAll("h3")[1].innerHTML = "-";
-                                break;
-                            case (input1 * input2) * input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "*";
-                                document.querySelectorAll("h3")[1].innerHTML = "*";
-                                break;
-                            case (input1 * input2) / input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "*";
-                                document.querySelectorAll("h3")[1].innerHTML = "/";
-                                break;
-                            case (input1 / input2) + input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "/";
-                                document.querySelectorAll("h3")[1].innerHTML = "+";
-                                break;
-                            case (input1 / input2) - input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "/";
-                                document.querySelectorAll("h3")[1].innerHTML = "-";
-                                break;
-                            case (input1 / input2) * input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "/";
-                                document.querySelectorAll("h3")[1].innerHTML = "*";
-                                break;
-                            case (input1 / input2) / input3:
-                                document.querySelectorAll("h3")[0].innerHTML = "/";
-                                document.querySelectorAll("h3")[1].innerHTML = "/";
-                                break;
-                            default:
-                                document.querySelectorAll("h3")[0].innerHTML = "&nbsp&nbsp&nbsp";
-                                document.querySelectorAll("h3")[1].innerHTML = "&nbsp&nbsp&nbsp";
-                                errorelem.innerHTML = "No answers found.";
-                                break;
-                        }
-                    }
-                } catch {
-                    errorelem.innerHTML = "Only numbers are allowed.";
-                }
-            } else {
-                errorelem.innerHTML = "Please enter all values.";
-            }
-            break;
-        case 'gen':
-            document.querySelectorAll("input")[0].value = ""
-            document.querySelectorAll("input")[1].value = ""
-            var randomNumber1 = Math.floor(Math.random() * 5);
-            var randomNumber2 = Math.floor(Math.random() * 5);
-            var randomNumber3 = Math.floor(Math.random() * 5);
-            var num3 = Math.floor(Math.random() * 10);
-            var num4 = Math.floor(Math.random() * 20);
-            if (randomNumber1 === 0) {
-                var sign2 = "+"
-                var num2 = num4 - num3
-            }
-            if (randomNumber1 === 1) {
-                var sign2 = "-"
-                var num2 = num4 + num3
-            }
-            if (randomNumber1 === 2) {
-                var sign2 = "*"
-                var num2 = num4 / num3
-            }
-            if (randomNumber1 === 3 || randomNumber1 === 4) {
-                var sign2 = "/"
-                var num2 = num4 * num3
-            }
-            if (randomNumber2 === 0) {
-                var sign1 = "+"
-                var num1 = randomNumber3 - num2
-            }
-            if (randomNumber2 === 1) {
-                var sign1 = "-"
-                var num1 = randomNumber3 + num2
-            }
-            if (randomNumber2 === 2) {
-                var sign1 = "*"
-                var num1 = randomNumber3 / num2
-            }
-            if (randomNumber2 === 3 || randomNumber2 === 4) {
-                var sign1 = "/"
-                var num1 = randomNumber3 * num2
-            }
-            num1 = Math.floor(num1)
-            num2 = Math.floor(num2)
-            document.querySelectorAll("h3")[0].innerHTML = num1
-            document.querySelectorAll("h3")[1].innerHTML = randomNumber3
-            document.querySelectorAll("h3")[2].innerHTML = num3
-            num4 = eval(eval(document.querySelectorAll("h3")[0].innerHTML + sign1 + document.querySelectorAll("h3")[1].innerHTML) + sign2 + document.querySelectorAll("h3")[2].innerHTML)
-            document.querySelectorAll("h3")[3].innerHTML = num4
-            if (Number.isInteger(num1) && Number.isInteger(num2) && Number.isInteger(num3) && Number.isInteger(num4)) {
-                console.log("Answers: " + sign1 + ", " + sign2)
-                document.querySelectorAll("input")[0].focus()
-            } else {
-                adp('gen');
-            }
-            break;
-        case 'check':
-            if (eval(eval(document.querySelectorAll("h3")[0].innerHTML + document.querySelectorAll("input")[0].value + document.querySelectorAll("h3")[1].innerHTML) + document.querySelectorAll("input")[1].value + document.querySelectorAll("h3")[2].innerHTML) == document.querySelectorAll("h3")[3].innerHTML) {
-                score += 1
-                errorelem.innerHTML = "Correct! Score: " + score
-                adp('gen');
-            } else {
-                errorelem.innerHTML = "Incorrect! Try again."
-            }
-            break;
-        case 'reset':
-            score = 0
-            errorelem.innerHTML = "Your score has been reset."
-            break;
-        default:
-            console.log("Variable 'type' as '" + type + "' is not valid.")
-            break;
-    }
-    return false;
+const statusElem = document.getElementById('status');
+
+const mathNum1 = document.getElementById('mathNum1');
+const mathNum2 = document.getElementById('mathNum2');
+const mathNum3 = document.getElementById('mathNum3');
+
+const mathAnswer = document.getElementById('mathAnswer');
+
+const mathOp1 = document.getElementById('mathOp1');
+const mathOp2 = document.getElementById('mathOp2');
+
+if (mathOp1) {
+	[mathOp1, mathOp2].forEach(elm => {
+		elm.oninput = function () {
+			if (/[*\/+\-x]$/.test(this.value)) {
+				this.value = this.value.slice(-1);
+			} else if (/^[*\/+\-x]/.test(this.value)) {
+				this.value = this.value.charAt(0);
+			} else {
+				this.value = '';
+			}
+		};
+	});
+}
+
+const solveNum1 = document.getElementById('solveNum1');
+const solveNum2 = document.getElementById('solveNum2');
+const solveNum3 = document.getElementById('solveNum3');
+const solveAnswer = document.getElementById('solveAnswer');
+
+const solveOp1 = document.getElementById('solveOp1');
+const solveOp2 = document.getElementById('solveOp2');
+
+if (solveNum1) {
+	[solveNum1, solveNum2, solveNum3, solveAnswer].forEach(elm => {
+		elm.oninput = function () {
+			solveOp1.innerText = '?';
+			solveOp2.innerText = '?';
+			this.value = this.value.replace(/[^0-9]/g, '');
+		};
+	});
+}
+
+let score = 0;
+
+function calc(left, right, operation) {
+	switch (operation) {
+		case '+':
+		case 'add':
+			return left + right;
+		case '-':
+		case 'sub':
+			return left - right;
+		case '*':
+		case 'x':
+		case 'mul':
+			return left * right;
+		case '/':
+		case 'div':
+			return left / right;
+	}
+	return NaN;
+}
+
+const operations = ['+', '-', '*', '/'];
+
+function gen() {
+	let leftNum = 0;
+	let middleNum = 0;
+	let rightNum = 0;
+
+	let op1 = operations[Math.floor(Math.random() * operations.length)];
+	let op2 = operations[Math.floor(Math.random() * operations.length)];
+
+	let finalLeftMiddle = 0;
+	let finalAnswer = 0;
+
+	do {
+		leftNum = Math.ceil(Math.random() * (op1 == '/' ? 100 : 20)) + 1;
+		middleNum = Math.ceil(Math.random() * 5) + 1;
+		finalLeftMiddle = calc(leftNum, middleNum, op1);
+
+		rightNum = Math.ceil(Math.random() * 10) + 1;
+		finalAnswer = calc(finalLeftMiddle, rightNum, op2);
+	} while (!Number.isInteger(finalAnswer) || finalAnswer < 1);
+
+	console.log(
+		`Answer: ${leftNum} ${op1} ${middleNum} ${op2} ${rightNum} = ${finalAnswer}`
+	);
+
+	mathOp1.value = '';
+	mathOp2.value = '';
+
+	mathNum1.innerText = leftNum;
+	mathNum2.innerText = middleNum;
+	mathNum3.innerText = rightNum;
+	mathAnswer.innerText = finalAnswer;
+
+	mathOp1.focus();
+}
+
+function solve() {
+	const left = parseInt(solveNum1.value);
+	const middle = parseInt(solveNum2.value);
+	const right = parseInt(solveNum3.value);
+	const answer = parseInt(solveAnswer.value);
+
+	solveOp1.innerText = '?';
+	solveOp2.innerText = '?';
+
+	if (isNaN(left) || isNaN(middle) || isNaN(right) || isNaN(answer)) {
+		return (statusElem.innerText = 'Please enter all values.');
+	}
+
+	for (const opL of operations) {
+		for (const opR of operations) {
+			if (calc(calc(left, middle, opL), right, opR) == answer) {
+				solveOp1.innerText = opL;
+				solveOp2.innerText = opR;
+				statusElem.innerText = 'Done.';
+				return;
+			}
+		}
+	}
+	statusElem.innerText = 'No answers found.';
+}
+
+function reset() {
+	score = 0;
+	statusElem.innerText = 'Your score has been reset.';
+}
+
+function check() {
+	if (
+		calc(
+			calc(
+				parseInt(mathNum1.innerText),
+				parseInt(mathNum2.innerText),
+				mathOp1.value
+			),
+			parseInt(mathNum3.innerText),
+			mathOp2.value
+		) == parseInt(mathAnswer.innerText)
+	) {
+		statusElem.innerText = `Correct! Score: ${++score}`;
+		gen();
+	} else {
+		statusElem.innerHTML = 'Incorrect! Try again.';
+	}
 }
